@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-.titulo{
-    
-=======
 function Values(){
     let Valor01 = parseFloat(document.getElementById('numero01').value);
     let Valor02 = parseFloat(document.getElementById('numero02').value);
@@ -39,5 +35,4 @@ function div(){
         alert("O resultado é: " + division);
     }
 }
->>>>>>> 791b96ee853b109026b4666e50b1b130686a0294
 }
