@@ -1,6 +1,6 @@
 function Values(){
-    let Valor01 = parseFloat(document.getElementById('numero01').value);
-    let Valor02 = parseFloat(document.getElementById('numero02').value);
+    let Valor01 = document.getElementById('numero01').value;
+    let Valor02 = document.getElementById('numero02').value;
 
     if(Valor01 == "" || Valor02 == ""){
         alert("Preencha os campos vazios");
@@ -9,7 +9,7 @@ function Values(){
         alert("Insira um valor válido");
         return null;
     }
-
+}
 function add(){
     let valores=Values();
     let soma = valores.Valor01 + valores.Valor02;
@@ -34,5 +34,4 @@ function div(){
         let division= valores.Valor01/valores.Valor02;
         alert("O resultado é: " + division);
     }
-}
 }
