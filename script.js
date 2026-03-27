@@ -1,21 +1,23 @@
 function Values(){
-    let Valor01 = parseFloat(document.getElementById('Numero01').value);
-    let Valor02 = parseFloat(document.getElementById('Numero02').value);
+    let Valor01 = document.getElementById('Numero01').value;
+    let Valor02 = document.getElementById('Numero02').value;
 
-    if(!Valor01 || !Valor02){
+    if(Valor01 === '' || Valor02 === ''){
         alert("Preencha os campos vazios");
         return null;
     }
+    Valor01 = parseFloat(Valor01);
+    Valor02 = parseFloat(Valor02);
     if (isNaN(Valor01) || isNaN(Valor02)){
         alert("Insira um valor válido");
         return null;
     }
-    return { Valor01, Valor02 };
+    return {Valor01, Valor02};
 }
 function add(){
     let valores=Values();
     if(valores == null){
-        return;
+        return null;
     }
     let soma = valores.Valor01 + valores.Valor02;
     alert("O resultado é: " + soma);
@@ -49,3 +51,8 @@ function div(){
         alert("O resultado é: " + division);
     }
 }
+function limpar_campos(){
+    document.getElementById('Numero01').value = '';
+    document.getElementById('Numero02').value = '';
+}
+
