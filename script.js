@@ -19,8 +19,8 @@ function add(){
     if(valores == null){
         return null;
     }
-    let soma = valores.Valor01 + valores.Valor02;
-    alert("O resultado é: " + soma);
+    let soma = (valores.Valor01 + valores.Valor02);
+    resultado(soma);
 }
 function sub(){
     let valores=Values();
@@ -28,7 +28,7 @@ function sub(){
         return;
     }
     let subtraction= valores.Valor01-valores.Valor02;
-    alert("O resultado é: " + subtraction);
+    resultado(subtraction);
 }
 function mult(){
     let valores=Values();
@@ -36,7 +36,7 @@ function mult(){
         return;
     }
     let multiplication=valores.Valor01*valores.Valor02;
-    alert("O resultado é: " + multiplication);
+    resultado(multiplication);
 }
 function div(){
     let valores = Values();
@@ -48,11 +48,15 @@ function div(){
         return;
     }else{
         let division= valores.Valor01/valores.Valor02;
-        alert("O resultado é: " + division);
+        resultado(division);
     }
 }
 function limpar_campos(){
     document.getElementById('Numero01').value = '';
     document.getElementById('Numero02').value = '';
+    resultado('');
 }
+function resultado(valor){
+    document.getElementById('resultado').textContent = valor;
 
+}

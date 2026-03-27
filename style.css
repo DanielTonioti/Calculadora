@@ -16,3 +16,8 @@ button{
     padding: 10px;
     margin: 10px;
 }
+#resultado_div{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(116, 187, 69);
+}
